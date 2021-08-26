@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>>Change background</title>
+    <style>
+      #change-button {
+        margin: 300px 640px;
+        width: 130px;
+        height: 60px;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        border: none;
+      }
+    </style>
+  </head>
+  <body id="mybody">
+    <button id="change-button">Click me</button>
+  </body>
+  <script>
+    let mybody = document.getElementById("mybody");
+    let myBtn = document.querySelector("#change-button");
+    let colors = ["Red", "green", "Blue", "yellow", "navy", "Cerise", "brown"];
+    let count = 0;
+
+    myBtn.addEventListener("click", () => {
+      if (count > colors.length - 1) count = 0;
+      mybody.style.backgroundColor = colors[count++];
+    });
+  </script>
+</html>
